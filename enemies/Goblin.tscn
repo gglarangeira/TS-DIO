@@ -62,6 +62,7 @@ height = 77.3333
 [node name="Goblin" type="CharacterBody2D" groups=["enemies"]]
 visibility_layer = 2
 scale = Vector2(1.5, 1.5)
+motion_mode = 1
 script = ExtResource("1_skeh5")
 health = 20
 death_prefab = ExtResource("2_qx8qi")

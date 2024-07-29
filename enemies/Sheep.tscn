@@ -61,6 +61,7 @@ height = 50.0
 
 [node name="Sheep" type="CharacterBody2D" groups=["enemies"]]
 visibility_layer = 2
+motion_mode = 1
 script = ExtResource("1_sjet7")
 health = 1
 death_prefab = ExtResource("2_e7c15")

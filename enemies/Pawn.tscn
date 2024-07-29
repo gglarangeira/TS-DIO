@@ -61,6 +61,7 @@ height = 50.0
 
 [node name="Pawn" type="CharacterBody2D" groups=["enemies"]]
 visibility_layer = 2
+motion_mode = 1
 script = ExtResource("1_nlgtw")
 health = 3
 death_prefab = ExtResource("2_yj12w")
