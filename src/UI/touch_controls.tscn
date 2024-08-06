@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmboqo1makko8"]
+
+[ext_resource type="Texture2D" uid="uid://bc85bmi7l0l41" path="res://assets/UI/TouchscreenUI/lineLight46.png" id="1_wg6vj"]
+[ext_resource type="Texture2D" uid="uid://lj3tsq4dthdr" path="res://assets/UI/TouchscreenUI/lineDark43.png" id="2_koq6g"]
+[ext_resource type="Script" path="res://UI/Joystick.gd" id="3_flw72"]
+[ext_resource type="Texture2D" uid="uid://bimd355udvqab" path="res://assets/UI/TouchscreenUI/lineLight05.png" id="4_0irbs"]
+[ext_resource type="Texture2D" uid="uid://bf2ho0c2wtxlq" path="res://assets/UI/TouchscreenUI/flatLight09.png" id="5_ri27c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u1i2c"]
+radius = 80.399
+
+[node name="TouchControls" type="Node"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(984, 472)
+texture_normal = ExtResource("1_wg6vj")
+texture_pressed = ExtResource("2_koq6g")
+action = "confirm_input"
+
+[node name="Joystick" type="Area2D" parent="."]
+position = Vector2(-24, 16)
+script = ExtResource("3_flw72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Joystick"]
+position = Vector2(152, 496)
+shape = SubResource("CircleShape2D_u1i2c")
+
+[node name="BigCircle" type="Sprite2D" parent="Joystick"]
+position = Vector2(152, 496)
+texture = ExtResource("4_0irbs")
+
+[node name="SmallCircle" type="Sprite2D" parent="Joystick/BigCircle"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_ri27c")
